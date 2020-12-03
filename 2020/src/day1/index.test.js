@@ -1,5 +1,11 @@
-import { calcPart1 } from './index'
-import data from './input.json'
+import { getInput } from '../util'
+import { runPart1 } from './index'
+
+let data = []
+
+beforeAll(async () => {
+  data = await getInput(1)
+})
 
 const sum = 2020
 
@@ -8,7 +14,7 @@ describe('sample', () => {
 
   test('numbers should match the example', () => {
     const expectedTotal = 514579
-    const result = calcPart1({ nums, sum })
+    const result = runPart1({ nums, sum })
 
     expect(result.pair).toContain(1721)
     expect(result.pair).toContain(299)
@@ -17,11 +23,17 @@ describe('sample', () => {
 })
 
 describe('part 1', () => {
-  test('finding total', () => {
-    const result = calcPart1({ nums: data, sum })
+  test('finding total for 2 items', () => {
+    const result = runPart1({ nums: data, sum })
 
     expect(result).toBeTruthy()
 
     console.log('total:', result.total)
+  })
+})
+
+describe('part 2', () => {
+  test('finding total for 3 items', () => {
+    fail('unfinished 😔')
   })
 })

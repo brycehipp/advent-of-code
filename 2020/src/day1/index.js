@@ -1,4 +1,4 @@
-export function calcPart1({ nums = [], sum = 0 }) {
+export function runPart1({ nums = [], sum = 0 }) {
   const map = {}
 
   for (const num of nums) {

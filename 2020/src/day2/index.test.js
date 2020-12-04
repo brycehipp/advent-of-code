@@ -29,16 +29,12 @@ describe('day2 - finding valid passwords', () => {
   test('part1', async () => {
     const result = runPart1(passwordData)
 
-    expect(result).toBeTruthy()
-
-    console.log('num of valid passwords:', result)
+    expect(result).toBe(620)
   })
 
   test('part2', async () => {
     const result = runPart2(passwordData)
 
-    expect(result).toBeTruthy()
-
-    console.log('num of valid passwords:', result)
+    expect(result).toBe(727)
   })
 })

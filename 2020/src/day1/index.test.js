@@ -26,14 +26,10 @@ describe('part 1', () => {
   test('finding total for 2 items', () => {
     const result = runPart1({ nums: data, sum })
 
-    expect(result).toBeTruthy()
-
-    console.log('total:', result.total)
+    expect(result.total).toBe(1016964)
   })
 })
 
 describe('part 2', () => {
-  test('finding total for 3 items', () => {
-    fail('unfinished 😔')
-  })
+  test.todo('finding total for 3 items')
 })
